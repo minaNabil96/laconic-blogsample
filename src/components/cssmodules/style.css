@@ -1,0 +1,95 @@
+/* Basic editor styles  */
+.body {
+  direction: rtl;
+}
+.Proaf {
+  margin-top: 0.75em;
+  background-color: #e9ecef;
+  height: 80px;
+  overflow: scroll;
+  overflow-y: auto;
+}
+
+.ProseMirror::-webkit-scrollbar {
+  display: none;
+}
+.ProseMirror ul,
+.ProseMirror ol {
+  padding: 0 1rem;
+}
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  line-height: 1.1;
+}
+.ProseMirror code {
+  background-color: rgba(97, 97, 97, 0.1);
+  color: #616161;
+}
+.ProseMirror pre {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "JetBrainsMono", monospace;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+.ProseMirror pre code {
+  color: inherit;
+  padding: 0;
+  background: none;
+  font-size: 0.8rem;
+}
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+}
+.ProseMirror blockquote {
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #212529;
+  color: gold;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: "Amiri", serif;
+}
+.ProseMirror hr {
+  border: none;
+  border-top: 2px solid rgba(13, 13, 13, 0.1);
+  margin: 2rem 0;
+}
+
+#editor {
+  background-color: rgb(194, 214, 208);
+  border-radius: 3px;
+  direction: rtl;
+  font-size: 15px;
+}
+
+.ProseMirror-focused {
+  outline: none !important;
+  border: none !important;
+}
+
+.ProseMirror blockquote {
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #212529;
+  color: gold;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.ProseMirror hr {
+  border: none;
+  border-top: 2px solid rgb(13 13 13);
+  margin: 2rem 0;
+}

@@ -1,0 +1,101 @@
+/* scrollbar */
+.users::-webkit-scrollbar {
+  width: 10px;
+  max-height: 7px;
+}
+
+/* Track */
+.users::-webkit-scrollbar-track {
+  background: rgb(16, 16, 17);
+}
+
+/* Handle */
+.users::-webkit-scrollbar-thumb {
+  background: #3e0bca;
+  box-shadow: #000000 2px 2px;
+  border-radius: 2px;
+  border: solid 0.1px rgba(245, 245, 245, 0.233);
+  height: 7px;
+}
+
+/* Handle on hover */
+.users::-webkit-scrollbar-thumb:hover {
+  background: #20a5da;
+}
+/* end scrollbar */
+
+/* .body {
+  background-image: url("https://res.cloudinary.com/minatry/image/upload/v1679673772/mgfel0wn2r074nvkz1vo.jpg");
+  background-size: auto;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+} */
+
+.login_inputs_size {
+  width: 250px;
+}
+
+.login_inputs_size:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.inputs_size {
+  width: 200px;
+}
+
+.inputs_size:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form_size {
+  height: 500px !important;
+}
+
+.login_form_size {
+  height: 350px !important;
+}
+
+.form_background {
+  background-color: #7fb5ff29;
+}
+
+.modalSize {
+  width: 200px;
+}
+
+.loginback {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(53, 6, 107) 35%,
+    rgb(103, 30, 172) 100%
+  );
+  -webkit-transition: color 2s ease;
+  -moz-transition: color 2s ease;
+  -o-transition: color 2s ease;
+  transition: color 2s ease;
+}
+
+.validationMsg {
+  position: absolute;
+  bottom: 20px;
+  width: 300px;
+  height: 80px;
+}
+
+.addSectionImage {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}

@@ -1,0 +1,58 @@
+.background {
+  background-color: rgb(124, 70, 187);
+}
+
+.background2 {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.errorback {
+  height: 100vh;
+  text-align: center;
+
+  color: black;
+  text-shadow: 2px 1px red;
+  font-size: x-large;
+}
+
+.myarticles_aside {
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+  width: 80%;
+  height: 500px;
+  background: rgb(2, 0, 36);
+  /* background: linear-gradient( 
+90deg
+, rgba(2, 0, 36, 0.8799894957983193) 15%, rgba(9, 103, 121, 1) 72%, rgba(18, 107, 125, 1) 100% ); */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 1px deepskyblue;
+  outline: solid 0.5px deepskyblue;
+  outline-style: dashed;
+  outline: thick;
+}
+
+.menuItem:hover,
+.menuItem:focus {
+  background-color: black !important;
+}
+
+.tdForButtons {
+  min-width: 100px;
+}
+
+/* AdminSections */
+
+.adminSections {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* end Admin sections */

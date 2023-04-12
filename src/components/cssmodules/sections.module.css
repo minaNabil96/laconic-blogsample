@@ -1,0 +1,37 @@
+.sections_img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: 1.2s;
+}
+
+.sections_img:hover {
+  width: 200px;
+  height: 200px;
+  object-position: left;
+
+  box-shadow: 2px 1px yellowgreen;
+}
+
+.sections_img2 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: 1.2s;
+}
+.sections_img2:hover {
+  width: 200px;
+  height: 200px;
+  object-position: right;
+
+  box-shadow: 2px 1px yellowgreen;
+}
+
+.errorback {
+  height: 100vh;
+  text-align: center;
+
+  color: black;
+  text-shadow: 2px 1px red;
+  font-size: x-large;
+}

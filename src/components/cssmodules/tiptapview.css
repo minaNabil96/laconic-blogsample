@@ -1,0 +1,16 @@
+.ProseMirror {
+  margin-top: 0.75em;
+  background-color: mintcream !important;
+
+  font-family: "Almarai", sans-serif;
+  font-weight: 600;
+}
+
+.textEditor_buttonSize {
+  width: 30px;
+  height: 30px;
+}
+.textEditor_buttonSize2 {
+  width: 20px;
+  height: 20px;
+}

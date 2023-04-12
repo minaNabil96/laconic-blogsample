@@ -1,0 +1,19 @@
+.searchSize {
+  flex: 1;
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 0;
+  height: inherit;
+}
+
+.searchContainer {
+  box-sizing: border-box;
+  height: 35px;
+  width: 200px;
+  overflow: hidden;
+}

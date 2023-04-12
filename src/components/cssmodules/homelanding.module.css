@@ -1,0 +1,135 @@
+.background {
+  background-image: linear-gradient(
+    to right top,
+    #3d8bff,
+    #6d5bae,
+    #5d3665,
+    #371d2d,
+    #000000
+  );
+}
+
+.background2 {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.errorback {
+  height: 100vh;
+  text-align: center;
+
+  color: black;
+  text-shadow: 2px 1px red;
+  font-size: x-large;
+}
+
+.error404 {
+  height: 100vh;
+  text-align: center;
+
+  color: black;
+  text-shadow: 2px 1px red;
+  font-style: italic;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.error404background {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 238, 238);
+}
+
+/* .mainPostContainer {
+  width: 800px;
+  height: 400px;
+  color: rgba(47, 50, 53, 0.39);
+} */
+
+.homeArticles {
+  border-radius: 140px 0px 0px 140px !important;
+  box-shadow: #1c6363 2px 0px 0px;
+}
+
+.homeArticlesReverse {
+  border-radius: 0px 140px 140px 0px !important;
+  box-shadow: #1c6363 2px 0px 0px;
+}
+
+.homeArticlesImg {
+  object-fit: cover;
+
+  height: 270px;
+  transition: object-position 1200ms;
+}
+
+.homeArticlesImg2 {
+  object-fit: cover;
+  height: 315px;
+  transition: object-position 1200ms;
+}
+.homeArticlesImg:hover {
+  object-fit: cover;
+  object-position: left;
+  height: 270px;
+}
+
+.homeArticlesImg2:hover {
+  object-fit: cover;
+  height: 315px;
+  object-position: left;
+}
+
+.mainarticleonlyforhover {
+  overflow: hidden;
+}
+.mainarticleonlyforhover:hover {
+  background-color: #4643457a;
+  box-shadow: #000000 2px 2px 4px;
+  transition: all 0.2s;
+}
+
+.homeArticlesCardsize {
+  margin-bottom: 3rem;
+  box-sizing: border-box;
+}
+
+.textWidth {
+  max-width: 90vw;
+}
+
+.titleAnimation {
+  color: bisque;
+}
+.titleAnimation:hover {
+  transition-duration: 500ms;
+  color: gold;
+}
+.titleAnimation::after {
+  margin-left: auto;
+  content: "";
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  width: 0%;
+  min-height: 2px;
+  background-color: aqua;
+  margin-bottom: 1rem;
+  transition: all 900ms;
+}
+
+.titleAnimation:hover::after {
+  margin-left: auto;
+  content: "";
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  width: 60%;
+  min-height: 2px;
+  background-color: aqua;
+  margin-bottom: 1rem;
+}

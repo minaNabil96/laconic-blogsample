@@ -1,0 +1,10 @@
+.switchers {
+  background-color: chartreuse !important;
+  box-shadow: none;
+}
+
+.switchers:active {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
