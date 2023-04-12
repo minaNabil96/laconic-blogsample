@@ -1,3 +1,14 @@
+.background {
+  background-image: linear-gradient(
+    to right top,
+    #3d8bff,
+    #6d5bae,
+    #5d3665,
+    #371d2d,
+    #000000
+  );
+}
+
 .sections_img {
   width: 200px;
   height: 200px;

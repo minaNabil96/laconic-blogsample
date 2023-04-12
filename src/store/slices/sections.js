@@ -14,7 +14,7 @@ export const getAllSections = createAsyncThunk(
       const data = await getAllSections.data;
       return data;
     } catch (error) {
-      rejectWithValue(error.message);
+      return rejectWithValue(error.message);
     }
   }
 );
@@ -32,7 +32,7 @@ export const getAllSectionsForAdmin = createAsyncThunk(
       const data = await getAllSections.data;
       return data;
     } catch (error) {
-      rejectWithValue(error.message);
+      return rejectWithValue(error.message);
     }
   }
 );
@@ -48,7 +48,7 @@ export const oneSectionDetails = createAsyncThunk(
       const data = await res.data;
       return data;
     } catch (error) {
-      rejectWithValue(error.message);
+      return rejectWithValue(error.message);
     }
   }
 );
