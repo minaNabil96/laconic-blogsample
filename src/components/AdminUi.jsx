@@ -1,18 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
+
 import styles from "../components/cssmodules/PostsView.module.css";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { useSelector, useDispatch } from "react-redux/es/exports";
-import adminSlice from "../store/slices/adminSlice";
 import { getAllUsers } from "../store/slices/adminSlice";
-import useAxiosPost from "./useAxiosPost";
 import { getUserInfo } from "../store/slices/auth";
 import {
   modalMessage,
   modalStatus,
-  formModal,
   modalType,
   closeModal,
 } from "../store/uiSlices/modalSlice";
@@ -23,15 +19,12 @@ import {
   closeBigModal,
 } from "../store/uiSlices/bigModalSlice";
 import { AdminGetUserArticles } from "../store/slices/userIf";
-import { clearUserArticles } from "../store/slices/userIf";
 import LoginModal from "./LoginModal";
 import Dropdown from "react-bootstrap/Dropdown";
 import { Button } from "react-bootstrap";
 import { MdDeleteSweep, MdEditNote } from "react-icons/md";
 import { FaInfoCircle } from "react-icons/fa";
 import MydModalWithGrid from "./MydModalWithGrid";
-
-const api = process.env.REACT_APP_LOCALHOST;
 
 function AdminUi() {
   const [selectedUserIdForDelete, setSelectedUserIdForDelete] = useState("");

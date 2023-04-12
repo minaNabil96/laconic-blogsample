@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React, useEffect } from "react";
 import styles from "../components/cssmodules/PostsView.module.css";
 import {
   getAllSectionsForAdmin,
@@ -21,7 +21,7 @@ import {
 } from "../store/uiSlices/bigModalSlice";
 import LoginModal from "./LoginModal";
 function AdminSections() {
-  const { sections, sectionsDetails } = useSelector((state) => state.sections);
+  const { sections } = useSelector((state) => state.sections);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllSectionsForAdmin());

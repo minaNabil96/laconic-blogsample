@@ -1,24 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
-import oneArticle from "../store/slices/oneArticle";
 import { getArticleById } from "../store/slices/oneArticle";
-import deleteArticle from "../store/slices/deleteArticle";
-import auth from "../store/slices/auth";
-import { login, getUserInfo } from "../store/slices/auth";
+import { getUserInfo } from "../store/slices/auth";
 import { deleteArticleAsync } from "../store/slices/deleteArticle";
-import addPostSlice from "../store/uiSlices/addPostSlice";
-import { useEffect, useState, useLayoutEffect } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
 import styles from "./cssmodules/Article.module.css";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { hideArticle, retrieveArticle } from "../store/slices/adminSlice";
 import Tiptap3 from "./Tiptap3";
-import LoginModal from "./LoginModal";
 import {
   modalStatus,
   modalMessage,
   closeModal,
-  formModal,
-  modalType,
   showModal,
 } from "../store/uiSlices/modalSlice";
 function EditableArticle(params) {

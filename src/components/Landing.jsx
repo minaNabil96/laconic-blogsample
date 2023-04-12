@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import articles from "../store/slices/articles";
 import { getAllArticles } from "../store/slices/articles";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";

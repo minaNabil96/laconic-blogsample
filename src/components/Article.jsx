@@ -1,11 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import oneArticle from "../store/slices/oneArticle";
 import { getArticleById } from "../store/slices/oneArticle";
 import { useEffect, useState } from "react";
 import styles from "./cssmodules/Article.module.css";
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Koala from "../images/Koala.jpg";
 
 import Tiptap3 from "./Tiptap3";
 function Article(params) {
@@ -16,11 +14,8 @@ function Article(params) {
   const [related, setRelated] = useState([]);
 
   // start toolkit get one article by id
-  let img = Koala;
   const dispatch = useDispatch();
-  const { oneArticle, loading, error } = useSelector(
-    (state) => state.oneArticle
-  );
+  const { loading, error } = useSelector((state) => state.oneArticle);
 
   useEffect(() => {
     dispatch(getArticleById(paramMatch))
