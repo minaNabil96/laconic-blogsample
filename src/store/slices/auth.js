@@ -36,7 +36,7 @@ export const getUserInfo = createAsyncThunk(
     const { rejectWithValue } = thunkAPI;
 
     try {
-      const login = await axios.get(`${localhost}/users/info`, {
+      const login = await axios.post(`${localhost}/users/info`, {
         withCredentials: true,
       });
       const data = await login.data;
