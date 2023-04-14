@@ -81,7 +81,7 @@ function Landing() {
                   className=" text-end ms-2 me-2 text-white fs-5 cardTextBreak 
              "
                 >
-                  {`${text.slice(0, 145)}  `}
+                  {`${[...text].length >= 100 ? text.slice(0, 100) : text}  `}
                   <span className="text-warning ">... أكمل القراءة</span>
                 </p>
               </div>
@@ -124,7 +124,7 @@ function Landing() {
                 className=" text-end ms-2 me-2 text-white fs-5 cardTextBreak
             textDecorationNone "
               >
-                {`${text.slice(0, 180)}  `}
+                {`${[...text].length >= 100 ? text.slice(0, 100) : text}  `}
                 <span className="text-warning">... أكمل القراءة</span>
               </p>
             </div>

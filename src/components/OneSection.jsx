@@ -120,7 +120,7 @@ function Posts() {
           />
         }
         <div className="pagination">
-          <ReactPaginate
+          {/* <ReactPaginate
             onPageChange={paginate}
             pageCount={numOfPages}
             previousLabel={"Prev"}
@@ -134,6 +134,25 @@ function Posts() {
               "page-link page-link-next rounded-pill page-number"
             }
             activeLinkClassName={"page-link active"}
+            onClick={() => toTop()}
+          /> */}
+          <ReactPaginate
+            breakLabel="..."
+            breakClassName="page-link rounded-pill page-number text-black"
+            onPageChange={paginate}
+            pageRangeDisplayed="2"
+            pageCount={numOfPages}
+            previousLabel={"Prev"}
+            nextLabel={"Next"}
+            containerClassName={"pagination  pagination"}
+            pageLinkClassName={"page-link rounded-pill page-number"}
+            previousLinkClassName={`  ${
+              errorMsg || posts.length === 0 ? "d-none" : "d-block"
+            } page-link  page-link-next rounded-pill page-number`}
+            nextLinkClassName={` ${
+              errorMsg || posts.length === 0 ? "d-none" : "d-block"
+            } page-link page-link-next rounded-pill page-number`}
+            activeLinkClassName={`  page-link active`}
             onClick={() => toTop()}
           />
         </div>
