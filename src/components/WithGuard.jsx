@@ -3,7 +3,8 @@ import styles from "../components/cssmodules/PostsView.module.css";
 import { Link } from "react-router-dom";
 function WithGuard({ children }) {
   const accessToken = sessionStorage.getItem("accessToken");
-  return accessToken ? (
+  const isSuper = sessionStorage.getItem("isSuper");
+  return accessToken && isSuper === "true" ? (
     <div>{children}</div>
   ) : (
     <div className={` ${styles.background} d-flex  flex-column `}>

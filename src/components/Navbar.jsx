@@ -20,6 +20,7 @@ const Navbar = ({ Translation }) => {
   const [token, setToken] = useState(false);
   let accessToken = sessionStorage.getItem("accessToken");
   let isAdmin = sessionStorage.getItem("admin");
+  let isSuper = sessionStorage.getItem("isSuper");
   useEffect(() => {
     accessToken ? setToken(true) : setToken(false);
   }, [accessToken]);
@@ -216,12 +217,14 @@ const Navbar = ({ Translation }) => {
             <li className={`  nav-item`}>
               <NavLink
                 className={`  ${styles.titleAnimation} nav-link ${
-                  token && isAdmin !== "true" ? "d-block" : "d-none"
+                  token && isSuper === "true" && isAdmin !== "true"
+                    ? "d-block"
+                    : "d-none"
                 }`}
                 to="/users/userif"
                 onClick={(e) => toTop(e)}
               >
-                {Translate ? "Add Article" : "لوحة الكاتب"}
+                {Translate ? "UserIf" : "لوحة الكاتب"}
               </NavLink>
             </li>
             <li className={` ${token ? "d-none" : "d-block"} nav-item`}>
