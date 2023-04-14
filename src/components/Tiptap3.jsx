@@ -196,7 +196,7 @@ export const MenuBar = ({ editor }) => {
     setSection([]);
   };
   // new tiptap 2
-  const imgHandler = async (e) => {
+  const imgHandler = (e) => {
     const img = e.target.files[0];
     let regex = /[^\s]+(.*?).(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)$/;
 
@@ -256,17 +256,26 @@ export const MenuBar = ({ editor }) => {
 
           const dateNow = new Date();
           if (secure_url) {
-            const articleObj = {
+            const articleObj1 = {
               id: postId,
               text: plainText,
               image: secure_url,
               title: title,
               author: authorId,
               body: convertedData,
-              date: dateNow,
               section: section,
             };
-            dispatch(editArticleThunk(articleObj))
+            const articleObj2 = {
+              id: postId,
+              text: plainText,
+              image: secure_url,
+              title: title,
+              author: authorId,
+              body: convertedData,
+            };
+            const post = section.length !== 0 ? articleObj1 : articleObj2;
+
+            dispatch(editArticleThunk(post))
               .unwrap()
               .then((data) => {
                 const { status } = data;
@@ -336,16 +345,24 @@ export const MenuBar = ({ editor }) => {
       } else {
         const dateNow = new Date();
 
-        const articleObj = {
+        const articleObj1 = {
           id: postId,
           text: plainText,
           title: title,
           author: authorId,
           body: convertedData,
-          date: dateNow,
+
           section: section,
         };
-        dispatch(editArticleThunk(articleObj))
+        const articleObj2 = {
+          id: postId,
+          text: plainText,
+          title: title,
+          author: authorId,
+          body: convertedData,
+        };
+        const post = section.length !== 0 ? articleObj1 : articleObj2;
+        dispatch(editArticleThunk(post))
           .unwrap()
           .then((data) => {
             const { status } = data;
@@ -396,7 +413,7 @@ export const MenuBar = ({ editor }) => {
       }
     }
   };
-
+  console.log(section);
   return (
     <div>
       <div className="d-flex  flex-wrap">

@@ -11,7 +11,7 @@ const Features = ({ Translate }) => {
   useEffect(() => {
     dispatch(getAllSections());
   }, [dispatch]);
-  console.log(error);
+
   const sectionsMap =
     sections &&
     sections.map(({ sectionName, _id, image }, idx) => (
