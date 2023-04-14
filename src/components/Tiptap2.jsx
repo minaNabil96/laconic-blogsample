@@ -180,13 +180,13 @@ export const MenuBar = ({ editor, callback }) => {
       section.length !== 0 &&
       authorId
     ) {
-      if (title.length < 70) {
+      if (title.length < 60) {
         dispatch(showModal());
 
         dispatch(modalStatus(true));
         dispatch(
           modalMessage({
-            status: `the title must be more than 70 character`,
+            status: `the title must be more than 60 character`,
             color: "info",
           })
         );

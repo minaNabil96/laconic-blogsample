@@ -224,13 +224,13 @@ export const MenuBar = ({ editor }) => {
     e.preventDefault();
     dispatch(publishSpin());
     if (selectedImg) {
-      if (title && title.length < 70) {
+      if (title && title.length < 60) {
         dispatch(showModal());
 
         dispatch(modalStatus(true));
         dispatch(
           modalMessage({
-            status: `the title must be more than 70 character`,
+            status: `the title must be more than 60 character`,
             color: "info",
           })
         );
@@ -273,7 +273,7 @@ export const MenuBar = ({ editor }) => {
                 const {
                   post: { _id },
                 } = data;
-                console.log(data);
+
                 if (status === "success") {
                   dispatch(showModal());
                   dispatch(modalStatus(true));
