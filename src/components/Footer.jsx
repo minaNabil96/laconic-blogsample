@@ -27,7 +27,7 @@ const Footer = ({ Translate }) => {
                   <span className="info-span user-select-none">Mina Nabil</span>
                   <br />
                   <span className="text-black-50 user-select-none">
-                    all rights resaved &copy; {year}
+                    all rights reserved &copy; {year}
                   </span>
                 </p>
                 <div className="cobyright-sign d-flex gap-3 user-select-none"></div>
