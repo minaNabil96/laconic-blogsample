@@ -51,7 +51,7 @@ const Footer = ({ Translate }) => {
               <br />
               <br /> للاستعلام و الشراء اضغط على التواصل
             </p>
-            <Link to="/contact">
+            <Link to="/contact" className="text-decoration-none">
               <button
                 className="btn footer-btn rounded-pill d-inline w-50 mb-4 mt-4 text-light"
                 onClick={() => toTop()}
