@@ -25,6 +25,7 @@ import WithGuardAdmin from "./components/WithGuardAdmin";
 // disable react div tools
 if (process.env.NODE_ENV === "production") {
   disableReactDevTools();
+  console.log = () => {};
 }
 // start lazyLodaing
 const UserIF = React.lazy(() => import("./components/UserIF"));
