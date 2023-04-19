@@ -38,7 +38,8 @@ function MyArticles(auth) {
               author: { arabicname },
             },
           ] = data;
-          arabicname ? setArabicName(arabicname) : setArabicName("");
+
+          data && arabicname ? setArabicName(arabicname) : setArabicName("");
           data ? setArticlesNum(data.length) : setArticlesNum("");
         })
         .catch((err) => {

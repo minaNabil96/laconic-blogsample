@@ -547,6 +547,67 @@ code {
 /* end-pagination */
 
 /* tiptap */
+/* Basic editor styles  */
+
+#editor .ProseMirror blockquote {
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #212529;
+  color: gold;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: "Amiri", serif;
+  font-weight: 400;
+}
+#editor .ProseMirror hr {
+  border: none;
+  border-top: 2px solid rgba(13, 13, 13, 0.1);
+  margin: 1rem 0;
+}
+
+#editor {
+  border-radius: 3px;
+  border: 2px solid black;
+
+  font-size: 15px;
+}
+
+#editor .ProseMirror {
+  outline: none !important;
+  border: none !important;
+  text-align: start;
+
+  padding: 1px;
+}
+
+.border-none {
+  border: none !important;
+}
+/* .ProseMirror-focused {
+  outline: none !important;
+  border: none !important;
+}
+
+.ProseMirror blockquote {
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #212529;
+  color: gold;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.ProseMirror hr {
+  border: none;
+  border-top: 2px solid rgb(13 13 13);
+  margin: 2rem 0;
+} */
 
 /* endtiptap */
 

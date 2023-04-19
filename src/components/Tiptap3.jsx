@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { EditorContent, objectIncludes, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import TextAlign from "@tiptap/extension-text-align";
 import TextDirection from "tiptap-text-direction-extension";
 import "./cssmodules/tiptapview.css";
@@ -42,8 +42,9 @@ import {
 
 // end of icons
 const localhost = process.env.REACT_APP_LOCALHOST;
-
 export default function ({ data, clicked }) {
+  const location = useLocation();
+
   const editor = useEditor(
     {
       extensions: [
@@ -88,8 +89,10 @@ export default function ({ data, clicked }) {
         {clicked ? <MenuBar editor={editor} /> : null}
         <EditorContent
           editor={editor}
-          id="editor"
-          className="mt-3 mb-2 border-dark tiptapview"
+          id={`editor`}
+          className={`mt-3 mb-2 border-dark ${
+            clicked !== true ? "border-none" : ""
+          }`}
         />
       </div>
     </>
@@ -413,7 +416,7 @@ export const MenuBar = ({ editor }) => {
       }
     }
   };
-  console.log(section);
+
   return (
     <div>
       <div className="d-flex  flex-wrap">
@@ -579,12 +582,12 @@ export const MenuBar = ({ editor }) => {
         >
           ordered list
         </button> */}
-      <button
+      {/* <button
         onClick={() => editor.chain().focus().toggleCodeBlock().run()}
         className={editor.isActive("codeBlock") ? "is-active" : ""}
       >
         code block
-      </button>
+      </button> */}
       <button
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         className={editor.isActive("blockquote") ? "is-active" : ""}
@@ -627,16 +630,16 @@ export const MenuBar = ({ editor }) => {
       >
         right
       </button>
-      <button
+      {/* <button
         onClick={() => editor.chain().focus().setTextAlign("justify").run()}
         className={editor.isActive({ textAlign: "justify" }) ? "is-active" : ""}
       >
         justify
-      </button>
-      <button onClick={() => editor.chain().focus().unsetTextAlign().run()}>
+      </button> */}
+      {/* <button onClick={() => editor.chain().focus().unsetTextAlign().run()}>
         unsetTextAlign
-      </button>
-      <button onClick={() => textdir()}>TextDirection</button>
+      </button> */}
+      {/* <button onClick={() => textdir()}>TextDirection</button> */}
       <LoginModal loginStatus={loginStatus} loginMsg={loginMsg} />
     </div>
   );

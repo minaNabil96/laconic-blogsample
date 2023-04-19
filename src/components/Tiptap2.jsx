@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import TextAlign from "@tiptap/extension-text-align";
 import TextDirection from "tiptap-text-direction-extension";
 import "./cssmodules/tiptapview.css";
+import "./cssmodules/style.css";
 import useAxiosPost from "./useAxiosPost";
 import {
   showModal,
@@ -322,7 +323,7 @@ export const MenuBar = ({ editor, callback }) => {
   };
 
   const textdir = () => {
-    editor.commands.setTextDirection("rtl"); //arguments: 'ltr'|'rtl'|'auto'
+    editor.commands.setTextDirection("ltr"); //arguments: 'ltr'|'rtl'|'auto'
   };
   const clearSectionsNames = (e) => {
     e.preventDefault();
@@ -490,12 +491,12 @@ export const MenuBar = ({ editor, callback }) => {
         >
           ordered list
         </button> */}
-      <button
+      {/* <button
         onClick={() => editor.chain().focus().toggleCodeBlock().run()}
         className={editor.isActive("codeBlock") ? "is-active" : ""}
       >
         code block
-      </button>
+      </button> */}
       <button
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         className={editor.isActive("blockquote") ? "is-active" : ""}
@@ -538,16 +539,16 @@ export const MenuBar = ({ editor, callback }) => {
       >
         right
       </button>
-      <button
+      {/* <button
         onClick={() => editor.chain().focus().setTextAlign("justify").run()}
         className={editor.isActive({ textAlign: "justify" }) ? "is-active" : ""}
       >
         justify
-      </button>
-      <button onClick={() => editor.chain().focus().unsetTextAlign().run()}>
+      </button> */}
+      {/* <button onClick={() => editor.chain().focus().unsetTextAlign().run()}>
         unsetTextAlign
-      </button>
-      <button onClick={() => textdir()}>TextDirection</button>
+      </button> */}
+      {/* <button onClick={() => textdir()}>TextDirection</button> */}
       <LoginModal loginStatus={loginStatus} loginMsg={loginMsg} />
     </div>
   );

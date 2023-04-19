@@ -453,12 +453,21 @@ function EditableArticle(params) {
             </section>
           </div>
         </>
+      ) : isSuper !== "true" ? (
+        <div
+          className={`${styles.errorback}
+            d-flex justify-content-center align-items-center ${
+              isSuper !== "true" ? "d-block" : "d-none"
+            } `}
+        >
+          {`Can't Access`}
+        </div>
       ) : (
         <div
           className={`${styles.errorback}
-            d-flex justify-content-center align-items-center `}
+            d-flex justify-content-center align-items-center`}
         >
-          {`Can't Access`}
+          loading...
         </div>
       )}
     </div>
