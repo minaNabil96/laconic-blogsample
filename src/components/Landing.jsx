@@ -103,11 +103,11 @@ function Landing() {
             className="text-none textDecorationNone"
           >
             <div className={`${styles.titleAnimation} ms-auto`}>
-              <h3
-                className={`  card-title text-end  mb-4  mt-3 textDecorationNone`}
+              <h4
+                className={`  card-title text-end  mb-3  mt-3 textDecorationNone`}
               >
                 {[...title].length >= 90 ? title.slice(0, 90) + "..." : title}
-              </h3>
+              </h4>
             </div>
             <div
               className={` ${styles.mainarticleonlyforhover} ${styles.homeArticlesCardsize} rounded mt-5 mb-5 `}

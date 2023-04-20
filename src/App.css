@@ -614,10 +614,16 @@ code {
 /* my articles */
 
 div.dropdown-menu.show {
-  background-color: rgba(33, 101, 202, 0.514) !important;
+  background-color: rgb(33, 101, 202) !important;
   overflow: scroll;
   overflow-y: auto;
   max-height: 190px;
+}
+div.dropdown-menu > * p {
+  color: white;
+}
+div.dropdown-menu > * p:hover {
+  color: gold;
 }
 div.dropdown-menu.show::-webkit-scrollbar {
   display: none;
