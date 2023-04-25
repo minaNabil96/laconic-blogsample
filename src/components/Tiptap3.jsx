@@ -264,7 +264,7 @@ export const MenuBar = ({ editor }) => {
               text: plainText,
               image: secure_url,
               title: title,
-              author: authorId,
+              // author: authorId,
               body: convertedData,
               section: section,
             };
@@ -273,7 +273,7 @@ export const MenuBar = ({ editor }) => {
               text: plainText,
               image: secure_url,
               title: title,
-              author: authorId,
+              // author: authorId,
               body: convertedData,
             };
             const post = section.length !== 0 ? articleObj1 : articleObj2;
@@ -352,7 +352,7 @@ export const MenuBar = ({ editor }) => {
           id: postId,
           text: plainText,
           title: title,
-          author: authorId,
+          // author: authorId,
           body: convertedData,
 
           section: section,
@@ -361,7 +361,7 @@ export const MenuBar = ({ editor }) => {
           id: postId,
           text: plainText,
           title: title,
-          author: authorId,
+          // author: authorId,
           body: convertedData,
         };
         const post = section.length !== 0 ? articleObj1 : articleObj2;
